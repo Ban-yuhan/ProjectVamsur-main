@@ -13,6 +13,12 @@ public class IceShardProjectile : MonoBehaviour
 
     private LayerMask enemyLayer;
 
+    [SerializeField]
+    private float frozenDuration = 1.5f;
+
+    [SerializeField]
+    private float decreaseSpeedRate = 0.5f;
+
     public void Setup(Vector2 direction, float speed, float lifeSec, float dmg, LayerMask layer)
     {
         moveDir = direction.normalized;
